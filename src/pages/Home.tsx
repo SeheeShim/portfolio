@@ -1,4 +1,9 @@
 import React, { useContext, useRef, useState } from "react";
+import EmailIcon from "../components/icons/EmailIcon";
+import PhoneIcon from "../components/icons/PhoneIcon";
+import InstaIcon from "../components/icons/InstaIcon";
+import BehanceIcon from "../components/icons/BehanceIcon";
+import GithubIcon from "../components/icons/GithubIcon";
 
 const Home = () => {
   const [resumeSection, setResumeSection] = useState("history");
@@ -46,7 +51,7 @@ const Home = () => {
       ></div>
       <div className="lg:hidden flex fixed z-50 w-screen h-screen inset-0 bg-black flex-col justify-center items-center text-white">
         <p className="  lg:w-[20%] z-20 font-black text-base lg:text-xl lg:leading-auto mb-5 ">
-          calm and quiet.
+          npm install -D tailwindcss calm and quiet.
         </p>{" "}
         모바일 환경에서는 지원되지 않습니다.
       </div>
@@ -58,30 +63,21 @@ const Home = () => {
         <div className="absolute top-[5%] lg:top-[30%] left-[8%] text-[#5b3815] flex flex-col justify-start items-start">
           <p className=" font-black text-6xl">PORTFOLIO</p>
           <p className=" font-serif text-3xl italic my-4 bg-[#5b3815] text-[#9f7d35] lg:bg-opacity-0 lg:text-[#5b3815]">
-            Bansuk Hwang
+            Sehee Shim
           </p>
         </div>
         <div className="absolute top-[90%] lg:top-[60%]  left-[8%] text-[#5b3815] flex flex-row justify-start items-end">
           <div className="w-[180px] border-b border-[1px] mr-2 lg:border-[#5b3815] border-[#9f7d35]"></div>
           <p className=" font-black text-2xl text-[#9f7d35] bg-[#5b3815] lg:bg-opacity-0 lg:text-[#5b3815]">
-            calm and quiet.
+            Sehee
           </p>
         </div>
         <div className="absolute top-[90%] w-full lg:top-[85%] lg:opacity-100 opacity-0 left-[8%] text-[#5b3815] flex flex-col justify-start items-start">
           <p className=" font-md text-sm">
-            © 2023 Bansuk Hwang. All Rights Reserved.
+            © 2024 Sehee Shim. All Rights Reserved.
           </p>
         </div>
-        <div className="w-full h-screen flex flex-col justify-end items-end absolute -z-10">
-          <video
-            className="inset-0 w-full h-full object-cover -z-20 object-bottom-right"
-            autoPlay
-            loop
-            muted
-          >
-            <source src="/portfolio/bg.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <div className="w-full h-screen flex flex-col justify-end items-end absolute -z-10"></div>
       </div>
       <div
         className="relative w-full h-screen overflow-hidden snap-center bg-[#5b3815] flex flex-col justify-start items-start"
@@ -90,7 +86,7 @@ const Home = () => {
         <div className=" w-full my-5 z-20 text-[#9f7d35] flex flex-row justify-start items-end sticky">
           <div className="w-[80%] border-b border-[1px] mr-2 border-[#9f7d35]"></div>
           <p className=" w-[10%] lg:w-[20%] font-black text-xl lg:text-3xl text-right lg:text-left leading-5 lg:leading-auto mx-3">
-            calm and quiet.
+            Sehee
           </p>
         </div>
         <div className="w-full h-[50%] lg:w-[20%] lg:h-screen object-cover relative inset-0 overflow-hidden">
@@ -160,9 +156,7 @@ const Home = () => {
         <div
           className="right-0 bottom-0 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] absolute z-30  rounded-full  m-10 flex flex-col justify-center items-center cursor-pointer"
           onClick={scrollToResume}
-        >
-          <NextIcon width="100%" color="#9f7d35" />
-        </div>
+        ></div>
 
         <div className="w-full h-[100px] py-5  px-10 lg:px-28 flex flex-row justify-between items-center  border-b border-[#9f7d35]">
           <p className=" w-[10%] lg:w-[20%] font-black text-base lg:text-xl text-left lg:text-center leading-5 lg:leading-auto mx-3">
@@ -173,24 +167,7 @@ const Home = () => {
             src="/portfolio/profile_sections-25.png"
           />
         </div>
-        {/* <div className="w-full h-[50px] border-b  border-[#9f7d35] flex flex-row justify-center items-center lg:text-base text-sm gap-5 ">
-          <p className="z-20 rounded-full h-[30px] hover:bg-[#9f7d35] hover:text-[#332811] p-2 flex flex-col justify-center items-center cursor-pointer">
-            ALL
-          </p>
-          <p className="z-20 rounded-full h-[30px] hover:bg-[#9f7d35] hover:text-[#332811] p-2 flex flex-col justify-center items-center cursor-pointer">
-            GRAPHIC
-          </p>
-          <p className="z-20 rounded-full h-[30px] hover:bg-[#9f7d35] hover:text-[#332811] p-2 flex flex-col justify-center items-center cursor-pointer">
-            ILLUSTRATIONS
-          </p>
-        </div> */}
-        <div className="w-[70%] h-[600px] flex flex-col justify-start items-center px-10 lg:px-28 py-10 overflow-y-auto overflow-x-hidden relative z-20 typeOne">
-          <div className="w-auto lg:w-[1000px] h-auto flex lg:flex-row flex-col lg:flex-wrap justify-start lg:justify-start items-center lg:items-start ">
-            {works.map((work) => {
-              return <WorkThumbnail work={work} />;
-            })}
-          </div>
-        </div>
+        <div className="w-[70%] h-[600px] flex flex-col justify-start items-center px-10 lg:px-28 py-10 overflow-y-auto overflow-x-hidden relative z-20 typeOne"></div>
       </div>
       <div
         ref={resumeRef}
@@ -199,9 +176,7 @@ const Home = () => {
         <div
           className="right-0 bottom-0 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] absolute z-30  rounded-full  m-10 flex flex-col justify-center items-center cursor-pointer"
           onClick={scrollToContact}
-        >
-          <NextIcon width="100%" color="#9f7d35" />
-        </div>
+        ></div>
         <div className="w-full h-[100px] py-5  px-10 lg:px-28 flex flex-row justify-between items-center  border-b border-[#9f7d35]">
           <p className=" w-[10%] lg:w-[20%] z-20 font-black text-base lg:text-xl text-left lg:text-center leading-5 lg:leading-auto mx-3">
             calm and quiet.
@@ -257,15 +232,6 @@ const Home = () => {
               <p>(+82)010-2629-2693</p>
             </div>
           </div>
-          {resumeSection === "history" ? (
-            <History />
-          ) : resumeSection === "skill" ? (
-            <Skill />
-          ) : resumeSection === "career" ? (
-            <Career />
-          ) : (
-            <AsAPerson />
-          )}
         </div>
       </div>
       <div

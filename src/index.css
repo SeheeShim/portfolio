@@ -1,17 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+}
+.noScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.typeOne::-webkit-scrollbar {
+  width: 4px;
+}
+.typeOne::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeOne::-webkit-scrollbar-thumb {
+  background: #9f7d35;
+}
+
+.typeMuff4::-webkit-scrollbar {
+  width: 4px;
+}
+.typeMuff4::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeMuff4::-webkit-scrollbar-thumb {
+  background: #b2b0b2;
+}
+
+.typeMuff5::-webkit-scrollbar {
+  width: 4px;
+}
+.typeMuff5::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeMuff5::-webkit-scrollbar-thumb {
+  background: #f6f3a3;
+}
+
+.typeMzy::-webkit-scrollbar {
+  width: 4px;
+}
+.typeMzy::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeMzy::-webkit-scrollbar-thumb {
+  background: #9b6464;
+}
+
+.typeMzyIllust::-webkit-scrollbar {
+  width: 4px;
+}
+.typeMzyIllust::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeMzyIllust::-webkit-scrollbar-thumb {
+  background: #f6dd62;
+}
+
+.typeMzyStory::-webkit-scrollbar {
+  width: 4px;
+}
+.typeMzyStory::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.typeMzyStory::-webkit-scrollbar-thumb {
+  background: #2c2b25;
+}
+
+.image-slider {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+  right: 0;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@layer utilities {
+  .object-bottom-right {
+    object-position: right bottom;
+  }
 }
